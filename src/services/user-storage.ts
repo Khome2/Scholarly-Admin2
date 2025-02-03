@@ -56,3 +56,7 @@ export function getNotifications(): Notification[]{
     return JSON.parse(localStorage.getItem('notifications') ?? '[]');
 }
 
+export function clearAdminUserData() {
+    localStorage.removeItem('userdata');
+}
+
