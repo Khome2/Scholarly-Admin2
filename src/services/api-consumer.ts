@@ -127,3 +127,13 @@ export async function updateChannelPhoto(channelId: string, profile: File){
 
     return response;
 }
+
+export const getAllAdmins = async () => {
+    try {
+      const response = await axios.get('http://localhost:8080/scholarly/api/v1/admin/getAllAdmins');
+      return response; // Axios returns a response with a 'data' field
+    } catch (error) {
+      console.error('Error fetching admins:', error);
+      throw error;
+    }
+  };
